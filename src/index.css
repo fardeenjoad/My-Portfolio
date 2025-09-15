@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Portfolio Design System */
+    --background: 0 0% 100%;
+    --foreground: 215 25% 9%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 9%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 9%;
+    
+    --primary: 215 25% 9%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 215 25% 9%;
+    
+    --muted: 220 13% 91%;
+    --muted-foreground: 215 16% 47%;
+    
+    --accent: 213 94% 68%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 213 94% 68%;
+    
+    --radius: 0.75rem;
+    
+    /* Custom Portfolio Colors */
+    --portfolio-primary: 215 25% 9%;
+    --portfolio-accent: 213 94% 68%;
+    --portfolio-muted: 215 16% 47%;
+    --portfolio-surface: 0 0% 100%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--portfolio-primary)), hsl(215 30% 15%));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--portfolio-accent)), hsl(213 80% 60%));
+    
+    /* Shadows */
+    --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-hover: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 215 25% 9%;
+    --foreground: 0 0% 100%;
+    
+    --card: 215 25% 9%;
+    --card-foreground: 0 0% 100%;
+    
+    --popover: 215 25% 9%;
+    --popover-foreground: 0 0% 100%;
+    
+    --primary: 0 0% 100%;
+    --primary-foreground: 215 25% 9%;
+    
+    --secondary: 215 20% 15%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 215 20% 15%;
+    --muted-foreground: 215 16% 65%;
+    
+    --accent: 213 94% 68%;
+    --accent-foreground: 215 25% 9%;
+    
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 215 20% 15%;
+    --input: 215 20% 15%;
+    --ring: 213 94% 68%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-weight: 600;
+  }
+}
